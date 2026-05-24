@@ -1,17 +1,111 @@
 ---
-title: "Prospectra"
+title: ""
+pagetitle: "Prospectra — Geospatial analytics, indexed to the cell."
+description: "A geospatial practice in the making, built in public over six months — Databricks-native pipelines on Spain's open data."
+page-layout: full
+toc: false
+format:
+  html:
+    css: index.css
 ---
 
-# Geospatial analytics, indexed to the cell.
+```{=html}
+<div class="home">
 
-A geospatial practice in the making. Building publicly. First project ships May 26.
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hex-bg" aria-hidden="true">
+    <svg viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <pattern id="hexpat" width="60" height="52" patternUnits="userSpaceOnUse">
+          <polygon points="15,0 45,0 60,26 45,52 15,52 0,26" fill="none" stroke="#19150f" stroke-width="0.8"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#hexpat)"/>
+      <polygon points="375,260 405,260 420,286 405,312 375,312 360,286" fill="#b8421a" class="hex-active"/>
+      <polygon points="555,468 585,468 600,494 585,520 555,520 540,494" fill="#b8421a" opacity="0.6"/>
+      <polygon points="975,156 1005,156 1020,182 1005,208 975,208 960,182" fill="#b8421a" opacity="0.4"/>
+      <polygon points="855,624 885,624 900,650 885,676 855,676 840,650" fill="#19150f" opacity="0.5"/>
+    </svg>
+  </div>
 
-> Every business problem has a location. Most companies leave that signal on the floor. We pick it up, give it an address, and put it to work.
+  <div class="hero-top">
+    <div class="eyebrow">Geospatial Analytics · Building in Public</div>
+    <div class="coords">
+      <div>LAT <span>40°25′ N</span></div>
+      <div>LON <span>3°42′ W</span></div>
+    </div>
+  </div>
 
-## Currently
+  <div class="hero-main">
+    <div class="hero-title" role="heading" aria-level="1">
+      Geospatial analytics,<br>
+      <em>indexed to the cell<span class="accent-dot">.</span></em>
+    </div>
+  </div>
 
-Week 5 of a 6-month build. Block 1 of the curriculum cleared. First portfolio project ships Tuesday. Four more queued.
+  <div class="hero-sub">
+    <p>A geospatial practice in the making — built in public over six months. The first project, mapping <em>where Spain actually lives</em>, ships May 26, 2026.</p>
+    <div class="pillpair">
+      <span class="pill">H3</span>
+      <span class="pill">GeoParquet</span>
+      <span class="pill">Apache Sedona</span>
+      <span class="pill">Databricks</span>
+    </div>
+  </div>
+</section>
 
-::: {.callout-note}
-This scaffold is a placeholder. Full homepage with hero, manifesto, and project preview tiles ships in T6.
-:::
+<!-- ========== STATUS STRIP ========== -->
+<div class="status-strip">
+  <div class="stat"><span class="val">Week 5</span> of 26</div>
+  <div class="stat"><span class="val">Block 1</span> curriculum cleared</div>
+  <div class="stat"><span class="val">May 26</span> first project ships</div>
+  <div class="stat"><span class="val">5</span> Spain projects planned</div>
+</div>
+
+<!-- ========== MANIFESTO ========== -->
+<section class="manifesto">
+  <p>Every business problem has a location. <span class="strong">Most companies leave that signal on the floor.</span> We pick it up, give it an address, and put it to work.</p>
+</section>
+
+<!-- ========== PROJECT PREVIEW TILES ========== -->
+<section class="home-projects">
+  <div class="section-label"><span>Projects</span> — Spain's demographic trilogy</div>
+  <div class="proj-grid">
+
+    <a class="proj-tile" href="projects/p-01-spain-population.qmd">
+      <div class="proj-head">
+        <span class="proj-code">P-01</span>
+        <span class="proj-status live">Ships May 26</span>
+      </div>
+      <h3 class="proj-title">Where does Spain actually live?</h3>
+      <p class="proj-sub">Population density per H3 cell, cross-validated against NASA Black Marble night-lights.</p>
+      <span class="proj-arrow">Read the build →</span>
+    </a>
+
+    <a class="proj-tile" href="projects/p-02-migration.qmd">
+      <div class="proj-head">
+        <span class="proj-code">P-02</span>
+        <span class="proj-status">Queued</span>
+      </div>
+      <h3 class="proj-title">The 2020–2024 reshuffling</h3>
+      <p class="proj-sub">Internal migration flows across Spain, traced year over year.</p>
+      <span class="proj-arrow">Coming soon →</span>
+    </a>
+
+    <a class="proj-tile" href="projects/p-03-housing-pressure.qmd">
+      <div class="proj-head">
+        <span class="proj-code">P-03</span>
+        <span class="proj-status">Queued</span>
+      </div>
+      <h3 class="proj-title">Where Spain grew but didn't build</h3>
+      <p class="proj-sub">Housing pressure where migration meets prices and the pace of construction.</p>
+      <span class="proj-arrow">Coming soon →</span>
+    </a>
+
+  </div>
+  <p class="proj-more">See all five projects → <a href="projects/index.qmd">Projects</a></p>
+</section>
+
+</div>
+```
