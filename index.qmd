@@ -1,0 +1,17 @@
+---
+title: "Prospectra"
+---
+
+# Geospatial analytics, indexed to the cell.
+
+A geospatial practice in the making. Building publicly. First project ships May 26.
+
+> Every business problem has a location. Most companies leave that signal on the floor. We pick it up, give it an address, and put it to work.
+
+## Currently
+
+Week 5 of a 6-month build. Block 1 of the curriculum cleared. First portfolio project ships Tuesday. Four more queued.
+
+::: {.callout-note}
+This scaffold is a placeholder. Full homepage with hero, manifesto, and project preview tiles ships in T6.
+:::

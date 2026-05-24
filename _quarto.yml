@@ -1,0 +1,44 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Prospectra"
+  description: "Geospatial analytics, indexed to the cell."
+  site-url: https://prospectra.earth
+  favicon: assets/brand/favicon.ico
+  open-graph:
+    image: assets/og-image.png
+  twitter-card:
+    image: assets/og-image.png
+    card-style: summary_large_image
+  navbar:
+    background: light
+    logo: assets/brand/prospectra-mark.svg
+    left:
+      - href: index.qmd
+        text: Home
+      - href: projects/index.qmd
+        text: Projects
+      - href: writing/index.qmd
+        text: Writing
+      - href: about.qmd
+        text: About
+  page-footer:
+    left: "© 2026 Prospectra · Geospatial analytics, indexed to the cell."
+    right:
+      - icon: github
+        href: https://github.com/ceo-prospectra/prospectra.earth
+      - icon: twitter
+        href: https://x.com/franjmartin21
+
+format:
+  html:
+    theme:
+      light: [cosmo, custom.scss]
+    css: styles.css
+    toc: true
+    fontsize: 17px
+    mainfont: "DM Sans"
+    monofont: "IBM Plex Mono"
+    headingfont: "Fraunces"
