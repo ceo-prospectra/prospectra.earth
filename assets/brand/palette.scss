@@ -1,0 +1,12 @@
+// Prospectra brand palette — single source of truth for Sass tokens.
+// Mirrors palette.json. Keep both in sync; see STYLE-GUIDE.md for usage rules.
+
+$paper:       #f3eee5;  // primary surface (warm cream)
+$paper-soft:  #ebe5da;  // secondary surface (banners, cards)
+$paper-deep:  #e0d9cb;  // tertiary surface (insets, footers)
+$ink:         #19150f;  // body text (deep warm brown-black)
+$ink-soft:    #2a241c;  // softened body text
+$muted:       #756a59;  // metadata, captions, secondary copy
+$hair:        #d4cbb9;  // hairline borders + rules
+$accent:      #b8421a;  // terracotta — links, brand pop, active hexes
+$accent-deep: #8f2f0f;  // accent hover / pressed

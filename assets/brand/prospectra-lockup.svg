@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 200" role="img" aria-label="Prospectra lockup: mark and wordmark">
+  <title>Prospectra lockup</title>
+  <style>
+    .word { font-family: "DM Sans", "Helvetica Neue", "Arial", sans-serif; font-weight: 500; font-size: 120px; letter-spacing: -0.02em; fill: #19150f; }
+    .sep  { font-family: "DM Sans", "Helvetica Neue", "Arial", sans-serif; font-weight: 500; font-size: 120px; fill: #b8421a; }
+  </style>
+  <g transform="translate(0,0)">
+    <g fill="none" stroke="#19150f" stroke-width="3" stroke-linejoin="round">
+      <polygon points="78,62 89,43 111,43 122,62 111,81 89,81"/>
+      <polygon points="45,81 56,62 78,62 89,81 78,100 56,100"/>
+      <polygon points="111,81 122,62 144,62 155,81 144,100 122,100"/>
+      <polygon points="45,119 56,100 78,100 89,119 78,138 56,138"/>
+      <polygon points="111,119 122,100 144,100 155,119 144,138 122,138"/>
+      <polygon points="78,138 89,119 111,119 122,138 111,157 89,157"/>
+    </g>
+    <polygon points="78,100 89,81 111,81 122,100 111,119 89,119" fill="#b8421a"/>
+  </g>
+  <text x="220" y="140" class="sep">·</text>
+  <text x="270" y="140" class="word">prospectra</text>
+</svg>

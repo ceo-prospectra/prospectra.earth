@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: _site
+  render:
+    - "**/*.qmd"   # only .qmd are pages; brand docs (STYLE-GUIDE.md) + README.md are not rendered
 
 website:
   title: "Prospectra"
