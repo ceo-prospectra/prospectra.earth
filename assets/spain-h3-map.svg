@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="Stylized map of the Iberian peninsula with H3 hexagons">
+  <defs>
+    <pattern id="darkhex" width="22" height="20" patternUnits="userSpaceOnUse">
+      <polygon points="5,0 17,0 22,10 17,20 5,20 0,10" fill="none" stroke="rgba(243,238,229,0.08)" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+  <rect width="400" height="500" fill="url(#darkhex)"/>
+  <path d="M 60 130 Q 80 100, 120 95 Q 160 88, 200 92 Q 240 95, 280 100 Q 310 105, 330 130 Q 345 160, 340 200 Q 338 240, 325 280 Q 315 310, 295 330 Q 270 350, 240 365 Q 200 380, 165 385 Q 130 388, 100 380 Q 75 372, 58 350 Q 45 320, 48 280 Q 50 240, 55 200 Q 56 165, 60 130 Z"
+        fill="rgba(243,238,229,0.06)" stroke="rgba(243,238,229,0.45)" stroke-width="1"/>
+  <circle cx="370" cy="220" r="6" fill="rgba(243,238,229,0.06)" stroke="rgba(243,238,229,0.45)" stroke-width="1"/>
+  <circle cx="380" cy="232" r="4" fill="rgba(243,238,229,0.06)" stroke="rgba(243,238,229,0.45)" stroke-width="1"/>
+  <g>
+    <polygon points="195,210 211,210 219,224 211,238 195,238 187,224" fill="#b8421a" opacity="0.95"/>
+    <polygon points="195,210 211,210 219,224 211,238 195,238 187,224" fill="none" stroke="#f3eee5" stroke-width="0.6"/>
+    <polygon points="135,180 147,180 153,190 147,200 135,200 129,190" fill="#b8421a" opacity="0.55"/>
+    <polygon points="155,160 167,160 173,170 167,180 155,180 149,170" fill="#b8421a" opacity="0.4"/>
+    <polygon points="240,170 252,170 258,180 252,190 240,190 234,180" fill="#b8421a" opacity="0.5"/>
+    <polygon points="265,200 277,200 283,210 277,220 265,220 259,210" fill="#b8421a" opacity="0.45"/>
+    <polygon points="285,235 297,235 303,245 297,255 285,255 279,245" fill="#b8421a" opacity="0.7"/>
+    <polygon points="175,260 187,260 193,270 187,280 175,280 169,270" fill="#b8421a" opacity="0.4"/>
+    <polygon points="215,290 227,290 233,300 227,310 215,310 209,300" fill="#b8421a" opacity="0.55"/>
+    <polygon points="245,320 257,320 263,330 257,340 245,340 239,330" fill="#b8421a" opacity="0.5"/>
+    <polygon points="105,260 117,260 123,270 117,280 105,280 99,270" fill="#b8421a" opacity="0.35"/>
+    <polygon points="280,140 292,140 298,150 292,160 280,160 274,150" fill="#b8421a" opacity="0.3"/>
+    <polygon points="85,200 97,200 103,210 97,220 85,220 79,210" fill="#b8421a" opacity="0.35"/>
+    <polygon points="155,330 167,330 173,340 167,350 155,350 149,340" fill="#b8421a" opacity="0.5"/>
+    <polygon points="125,310 137,310 143,320 137,330 125,330 119,320" fill="#b8421a" opacity="0.4"/>
+  </g>
+  <g font-family="IBM Plex Mono, monospace" font-size="8" fill="rgba(243,238,229,0.4)">
+    <text x="20" y="80">42°N</text>
+    <text x="20" y="200">40°N</text>
+    <text x="20" y="320">38°N</text>
+    <text x="20" y="440">36°N</text>
+    <text x="60" y="475">8°W</text>
+    <text x="180" y="475">4°W</text>
+    <text x="300" y="475">0°</text>
+  </g>
+  <g transform="translate(280, 440)">
+    <line x1="0" y1="0" x2="80" y2="0" stroke="rgba(243,238,229,0.5)" stroke-width="0.8"/>
+    <line x1="0" y1="-3" x2="0" y2="3" stroke="rgba(243,238,229,0.5)" stroke-width="0.8"/>
+    <line x1="40" y1="-3" x2="40" y2="3" stroke="rgba(243,238,229,0.5)" stroke-width="0.8"/>
+    <line x1="80" y1="-3" x2="80" y2="3" stroke="rgba(243,238,229,0.5)" stroke-width="0.8"/>
+    <text x="0" y="14" font-family="IBM Plex Mono, monospace" font-size="7" fill="rgba(243,238,229,0.6)">0</text>
+    <text x="32" y="14" font-family="IBM Plex Mono, monospace" font-size="7" fill="rgba(243,238,229,0.6)">200 km</text>
+  </g>
+</svg>

@@ -30,23 +30,23 @@ format:
   </div>
 
   <div class="hero-top">
-    <div class="eyebrow">Geospatial Analytics · Building in Public</div>
-    <div class="coords">
+    <div class="eyebrow reveal d1">Geospatial Analytics · Building in Public</div>
+    <div class="coords reveal d1">
       <div>LAT <span>40°25′ N</span></div>
       <div>LON <span>3°42′ W</span></div>
     </div>
   </div>
 
   <div class="hero-main">
-    <div class="hero-title" role="heading" aria-level="1">
+    <div class="hero-title reveal d2" role="heading" aria-level="1">
       Geospatial analytics,<br>
       <em>indexed to the cell<span class="accent-dot">.</span></em>
     </div>
   </div>
 
   <div class="hero-sub">
-    <p>A geospatial practice in the making — built in public over six months. The first project, mapping <em>where Spain actually lives</em>, ships May 26, 2026.</p>
-    <div class="pillpair">
+    <p class="reveal d3">A geospatial practice in the making — built in public over six months. The first project, mapping <em>where Spain actually lives</em>, ships May 26, 2026.</p>
+    <div class="pillpair reveal d4">
       <span class="pill">H3</span>
       <span class="pill">GeoParquet</span>
       <span class="pill">Apache Sedona</span>
@@ -56,7 +56,7 @@ format:
 </section>
 
 <!-- ========== STATUS STRIP ========== -->
-<div class="status-strip">
+<div class="status-strip reveal d5">
   <div class="stat"><span class="val">Week 5</span> of 26</div>
   <div class="stat"><span class="val">Block 1</span> curriculum cleared</div>
   <div class="stat"><span class="val">May 26</span> first project ships</div>
@@ -66,6 +66,37 @@ format:
 <!-- ========== MANIFESTO ========== -->
 <section class="manifesto">
   <p>Every business problem has a location. <span class="strong">Most companies leave that signal on the floor.</span> We pick it up, give it an address, and put it to work.</p>
+</section>
+
+<!-- ========== FEATURED PROJECT (P-01) ========== -->
+<section class="feature">
+  <div class="case">
+    <div class="case-visual">
+      <div class="corner tl"></div>
+      <div class="corner tr"></div>
+      <div class="corner bl"></div>
+      <div class="corner br"></div>
+      <div class="meta">
+        <div>Project / <span>P-01</span></div>
+        <div>Resolution / <span>H3 r9</span></div>
+      </div>
+      <img class="map" src="assets/spain-h3-map.svg" alt="Stylized map of the Iberian peninsula with H3 hexagons">
+
+    </div>
+
+    <div class="case-body">
+      <div class="case-tag">P-01 · Ships May 26</div>
+      <h2>Where does Spain <em>actually</em> live?</h2>
+      <p>The opening project bins Spain's population into H3 cells from the <em>INE Padrón</em>, then cross-checks the result against NASA's Black Marble night-lights — a test of where people really are, not just where the registry lists them.</p>
+      <p>It's the first chapter of a three-part series on Spain's demographic and housing story.</p>
+      <div class="case-sources">
+        <div><h4>Population</h4><div class="src">INE Padrón</div></div>
+        <div><h4>Index</h4><div class="src">H3 · r9</div></div>
+        <div><h4>Validation</h4><div class="src">Black Marble</div></div>
+      </div>
+      <p class="proj-more"><a href="projects/p-01-spain-population.qmd">Read the build →</a></p>
+    </div>
+  </div>
 </section>
 
 <!-- ========== PROJECT PREVIEW TILES ========== -->
