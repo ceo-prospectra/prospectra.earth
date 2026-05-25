@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- LinkedIn banner · 1584×396. Content centred to clear the profile-photo overlap (bottom-left). -->
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1584px; height: 396px; overflow: hidden; }
+  .card {
+    position: relative; width: 1584px; height: 396px;
+    background: #f3eee5;
+    background-image: radial-gradient(circle at 88% 90%, rgba(184,66,26,0.06), transparent 55%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    font-family: "IBM Plex Mono", monospace; border-bottom: 5px solid #b8421a;
+  }
+  .hex { position: absolute; inset: 0; opacity: 0.13; pointer-events: none; }
+  .hex svg { width: 100%; height: 100%; }
+  .lockup { position: relative; z-index: 2; display: flex; align-items: center; gap: 15px; margin-bottom: 18px; }
+  .lockup svg { width: 58px; height: 58px; }
+  .word { font-size: 25px; letter-spacing: 0.22em; color: #19150f; }
+  .word .dot { color: #b8421a; }
+  .tag { position: relative; z-index: 2; font-family: "Fraunces", serif; font-style: italic; font-weight: 300; font-size: 32px; letter-spacing: -0.01em; color: #19150f; }
+  .tag .dot { color: #b8421a; font-style: normal; }
+  .pillar { position: relative; z-index: 2; margin-top: 20px; font-size: 15px; letter-spacing: 0.18em; text-transform: uppercase; color: #b8421a; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="hex">
+    <svg viewBox="0 0 1584 396" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <pattern id="hp" width="60" height="52" patternUnits="userSpaceOnUse">
+          <polygon points="15,0 45,0 60,26 45,52 15,52 0,26" fill="none" stroke="#19150f" stroke-width="0.8"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#hp)"/>
+      <polygon points="255,150 285,150 300,176 285,202 255,202 240,176" fill="#b8421a" opacity="0.55"/>
+      <polygon points="1300,210 1330,210 1345,236 1330,262 1300,262 1285,236" fill="#b8421a" opacity="0.4"/>
+    </svg>
+  </div>
+  <div class="lockup">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="#19150f" stroke-width="3" stroke-linejoin="round">
+        <polygon points="78,62 89,43 111,43 122,62 111,81 89,81"/>
+        <polygon points="45,81 56,62 78,62 89,81 78,100 56,100"/>
+        <polygon points="111,81 122,62 144,62 155,81 144,100 122,100"/>
+        <polygon points="45,119 56,100 78,100 89,119 78,138 56,138"/>
+        <polygon points="111,119 122,100 144,100 155,119 144,138 122,138"/>
+        <polygon points="78,138 89,119 111,119 122,138 111,157 89,157"/>
+      </g>
+      <polygon points="78,100 89,81 111,81 122,100 111,119 89,119" fill="#b8421a"/>
+    </svg>
+    <span class="word">prospectra<span class="dot">·</span></span>
+  </div>
+  <div class="tag">Geospatial analytics, indexed to the cell<span class="dot">.</span></div>
+  <div class="pillar">Spain projects · Databricks lakehouse · Open data</div>
+</div>
+</body>
+</html>

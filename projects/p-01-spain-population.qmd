@@ -1,6 +1,7 @@
 ---
 title: "Where does Spain actually live?"
 subtitle: "Population density per H3 cell, cross-checked against night-lights."
+description: "Binning Spain's INE Padrón population into H3 res-9 cells and validating it against NASA Black Marble night-lights — the first project in Prospectra's demographic trilogy."
 date: 2026-05-26
 author: "Prospectra"
 categories: [H3, INE, raster, Spain]

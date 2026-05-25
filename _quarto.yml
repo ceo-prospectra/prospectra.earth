@@ -17,6 +17,7 @@ website:
   twitter-card:
     image: assets/og-image.png
     card-style: summary_large_image
+    creator: "@franjmartin21"
   navbar:
     background: light
     logo: assets/brand/prospectra-mark.svg

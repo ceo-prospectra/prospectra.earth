@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- X / Twitter title-card TEMPLATE · 1200×675. Edit .code / .title / .sub per project, then re-render. -->
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 675px; overflow: hidden; }
+  .card {
+    position: relative; width: 1200px; height: 675px;
+    background: #19150f;
+    background-image: radial-gradient(circle at 85% 12%, rgba(184,66,26,0.20), transparent 46%);
+    color: #f3eee5; font-family: "IBM Plex Mono", monospace;
+    padding: 60px 64px; display: flex; flex-direction: column; justify-content: space-between;
+  }
+  .hex { position: absolute; inset: 0; opacity: 0.06; pointer-events: none; }
+  .hex svg { width: 100%; height: 100%; }
+  .top { position: relative; z-index: 2; display: flex; align-items: center; gap: 14px; }
+  .top svg { width: 46px; height: 46px; }
+  .brand { font-size: 18px; letter-spacing: 0.22em; }
+  .brand .dot { color: #b8421a; }
+  .mid { position: relative; z-index: 2; }
+  .code { font-size: 17px; letter-spacing: 0.22em; text-transform: uppercase; color: #b8421a; margin-bottom: 22px; }
+  .title { font-family: "Fraunces", serif; font-weight: 400; font-size: 62px; line-height: 1.02; letter-spacing: -0.02em; max-width: 90%; margin-bottom: 22px; }
+  .sub { font-family: "Fraunces", serif; font-style: italic; font-weight: 300; font-size: 25px; line-height: 1.3; color: rgba(243,238,229,0.72); max-width: 78%; }
+  .foot { position: relative; z-index: 2; display: flex; justify-content: flex-end; font-size: 15px; letter-spacing: 0.16em; color: rgba(243,238,229,0.5); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="hex">
+    <svg viewBox="0 0 1200 675" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <pattern id="hp" width="60" height="52" patternUnits="userSpaceOnUse">
+          <polygon points="15,0 45,0 60,26 45,52 15,52 0,26" fill="none" stroke="#f3eee5" stroke-width="0.8"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#hp)"/>
+    </svg>
+  </div>
+  <div class="top">
+    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" stroke="#f3eee5" stroke-width="3" stroke-linejoin="round">
+        <polygon points="78,62 89,43 111,43 122,62 111,81 89,81"/>
+        <polygon points="45,81 56,62 78,62 89,81 78,100 56,100"/>
+        <polygon points="111,81 122,62 144,62 155,81 144,100 122,100"/>
+        <polygon points="45,119 56,100 78,100 89,119 78,138 56,138"/>
+        <polygon points="111,119 122,100 144,100 155,119 144,138 122,138"/>
+        <polygon points="78,138 89,119 111,119 122,138 111,157 89,157"/>
+      </g>
+      <polygon points="78,100 89,81 111,81 122,100 111,119 89,119" fill="#b8421a"/>
+    </svg>
+    <span class="brand">prospectra<span class="dot">·</span></span>
+  </div>
+  <div class="mid">
+    <div class="code">P-01 · Spain</div>
+    <div class="title">Where does Spain actually live?</div>
+    <div class="sub">Population density per H3 cell, cross-checked against NASA Black Marble night-lights.</div>
+  </div>
+  <div class="foot">prospectra.earth</div>
+</div>
+</body>
+</html>
