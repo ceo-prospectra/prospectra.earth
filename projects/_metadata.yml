@@ -1,0 +1,5 @@
+# Directory metadata — applies to every page under projects/.
+# Published notebooks/articles render their SAVED outputs and are NEVER re-executed
+# at build time. The analyses run on Databricks; the site builder only renders results.
+execute:
+  enabled: false
