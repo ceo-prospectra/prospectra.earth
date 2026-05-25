@@ -5,6 +5,7 @@ project:
     - "**/*.qmd"   # only .qmd are pages; brand docs (STYLE-GUIDE.md) + README.md are not rendered
   resources:
     - CNAME        # custom-domain marker for GitHub Pages; must land in _site every build
+    - assets/og-image.png   # social-share image referenced by open-graph/twitter-card meta
 
 website:
   title: "Prospectra"
