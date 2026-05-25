@@ -1,0 +1,44 @@
+[
+  {
+    "objectID": "projects/p-01-spain-population.html",
+    "href": "projects/p-01-spain-population.html",
+    "title": "Where does Spain actually live?",
+    "section": "",
+    "text": "NoteIn progress — ships May 26, 2026\n\n\n\nThis is the build page for P-01, the first project in Prospectra’s demographic trilogy. It’s published as the work happens. The code and figure below show the approach; the finished analysis and charts land on May 26."
+  },
+  {
+    "objectID": "projects/p-01-spain-population.html#the-question",
+    "href": "projects/p-01-spain-population.html#the-question",
+    "title": "Where does Spain actually live?",
+    "section": "The question",
+    "text": "The question\nSpain’s population register, the INE Padrón Continuo, is published per municipality — and municipalities are wildly uneven in size. Madrid is one polygon; so is a 12-person hamlet in Soria. Ask “where do people actually live?” with that data and the map lies: it tells you about administrative borders, not density.\nThe fix is to throw away the borders and bin everyone into a regular grid — Uber’s H3 hexagons — then sanity-check the result against an independent signal: how brightly each cell glows at night."
+  },
+  {
+    "objectID": "projects/p-01-spain-population.html#the-data",
+    "href": "projects/p-01-spain-population.html#the-data",
+    "title": "Where does Spain actually live?",
+    "section": "The data",
+    "text": "The data\n\n\n\nLayer\nSource\nResolution\n\n\n\n\nPopulation\nINE Padrón Continuo\nMunicipal polygon\n\n\nSpatial index\nUber H3\nres-9 (~0.1 km²)\n\n\nValidation\nNASA Black Marble (VIIRS)\n~500 m raster"
+  },
+  {
+    "objectID": "projects/p-01-spain-population.html#approach",
+    "href": "projects/p-01-spain-population.html#approach",
+    "title": "Where does Spain actually live?",
+    "section": "Approach",
+    "text": "Approach\n\nBin municipal population into H3 res-9 cells (area-weighted).\nAggregate night-time radiance per cell from the Black Marble raster.\nCompare the two surfaces — where they disagree is where the register and reality part ways.\n\n\n1 · Binning population to H3\nOn Databricks, with Apache Sedona for the spatial join and the built-in h3_* SQL functions for indexing — no GIS server, just the lakehouse:\n# Databricks · PySpark + Apache Sedona\nfrom sedona.spark import SedonaContext\n\nsedona = SedonaContext.create(spark)\n\n# municipal polygons (INE) → H3 res-9 cells covering each one\ncells = (\n    spark.table(\"ine.padron_municipal\")\n         .selectExpr(\n             \"muni_code\",\n             \"poblacion\",\n             \"explode(h3_polyfill(geom, 9)) AS h3\")        # one row per covered cell\n)\n\n# split each municipality's population across its cells, weighted by area\npop_per_cell = (\n    cells.withColumn(\"cell_pop\", col(\"poblacion\") * col(\"area_share\"))\n         .groupBy(\"h3\")\n         .agg(sum(\"cell_pop\").alias(\"population\"))\n)\n\n\n2 · Cross-checking against night-lights\nZonal statistics straight in Databricks SQL — average VIIRS radiance per H3 cell:\nSELECT  h3_cell,\n        AVG(radiance) AS mean_radiance\nFROM    black_marble.viirs_2024\nGROUP BY h3_cell\n\n\nThe grid, over Iberia\n\n\n\nIllustrative H3 coverage over the Iberian peninsula. The final population choropleth and the night-lights agreement map ship May 26."
+  },
+  {
+    "objectID": "projects/p-01-spain-population.html#what-ships-may-26",
+    "href": "projects/p-01-spain-population.html#what-ships-may-26",
+    "title": "Where does Spain actually live?",
+    "section": "What ships May 26",
+    "text": "What ships May 26\n\nThe full notebook (population binning + raster zonal stats), reproducible on Databricks Free Edition.\nTwo maps: the H3 population surface, and where it agrees / disagrees with night-lights.\nA written piece, plus an X thread walking through the result."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Prospectra",
+    "section": "",
+    "text": "Geospatial Analytics · Building in Public\n    \n      LAT 40°25′ N\n      LON 3°42′ W\n    \n  \n\n  \n    \n      Geospatial analytics,\n      indexed to the cell.\n    \n  \n\n  \n    A geospatial practice in the making — built in public over six months. The first project, mapping where Spain actually lives, ships May 26, 2026.\n    \n      H3\n      GeoParquet\n      Apache Sedona\n      Databricks\n    \n  \n\n\n\n\n  Week 5 of 26\n  Block 1 curriculum cleared\n  May 26 first project ships\n  5 Spain projects planned\n\n\n\n\n  Every business problem has a location. Most companies leave that signal on the floor. We pick it up, give it an address, and put it to work.\n\n\n\n\n  \n    \n      \n      \n      \n      \n      \n        Project / P-01\n        Resolution / H3 r9\n      \n      \n\n    \n\n    \n      P-01 · Ships May 26\n      Where does Spain actually live?\n      The opening project bins Spain's population into H3 cells from the INE Padrón, then cross-checks the result against NASA's Black Marble night-lights — a test of where people really are, not just where the registry lists them.\n      It's the first chapter of a three-part series on Spain's demographic and housing story.\n      \n        PopulationINE Padrón\n        IndexH3 · r9\n        ValidationBlack Marble\n      \n      Read the build →\n    \n  \n\n\n\n\n  Projects — Spain's demographic trilogy\n  \n\n    \n      \n        P-01\n        Ships May 26\n      \n      Where does Spain actually live?\n      Population density per H3 cell, cross-validated against NASA Black Marble night-lights.\n      Read the build →\n    \n\n    \n      \n        P-02\n        Queued\n      \n      The 2020–2024 reshuffling\n      Internal migration flows across Spain, traced year over year.\n      Coming soon →\n    \n\n    \n      \n        P-03\n        Queued\n      \n      Where Spain grew but didn't build\n      Housing pressure where migration meets prices and the pace of construction.\n      Coming soon →\n    \n\n  \n  See all five projects → Projects\n\n\n\n\n  Writing — notes from the build\n  Essays on the methods behind each project — the indexing schemes, the data sources, the trade-offs worth arguing about. The first pieces ship alongside P-01.\n  \n    \n      H3 as integer hashing\n      Soon\n    \n    \n      The H3 resolution trade-off\n      Soon\n    \n  \n\n\n\n\n  About — what Prospectra is\n  Prospectra is a geospatial analytics practice, built in public. Spain has a gap: the traditional GIS shops don't run on the lakehouse, and the big Databricks consultancies don't do geospatial. Prospectra is being built to live in that intersection — Databricks-native spatial pipelines on Spain's open data.\n  Right now it's week 5 of a six-month sprint: twenty lessons, five portfolio projects, each shipping as a public article. Block 1 of the curriculum is cleared; the first project ships May 26. This site is the stage where the work goes public."
+  }
+]
