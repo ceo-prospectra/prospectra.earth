@@ -360,6 +360,34 @@ body {
 }
 .case-sources .src { font-family: "Fraunces", serif; font-style: italic; font-size: 19px; line-height: 1.1; color: var(--ink); }
 
+/* ---------- WRITING + ABOUT (homepage sections) ---------- */
+.home-writing, .home-about { padding: 80px 40px; max-width: 1080px; margin: 0 auto; }
+.home-writing .lead, .home-about p { font-size: 18px; line-height: 1.6; color: var(--ink-soft); max-width: 720px; }
+.home-about p + p { margin-top: 18px; }
+.about-accent { color: var(--accent); }
+.writing-list { margin-top: 28px; border-top: 1px solid var(--hair); }
+.writing-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 24px;
+  padding: 20px 2px;
+  border-bottom: 1px solid var(--hair);
+}
+.writing-row .wt { font-family: "Fraunces", serif; font-weight: 400; font-size: 22px; letter-spacing: -0.015em; color: var(--ink); }
+.writing-row .ws {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--hair);
+  border-radius: 100px;
+  padding: 4px 9px;
+  white-space: nowrap;
+}
+
+/* Offset anchored sections so their tops clear the fixed navbar */
+#projects, #writing, #about { scroll-margin-top: 84px; }
+
 /* ---------- MOBILE ---------- */
 @media (max-width: 900px) {
   .hero { padding: 64px 20px 56px; min-height: auto; }
@@ -374,4 +402,5 @@ body {
   .feature { padding: 8px 20px 24px; }
   .feature .case { grid-template-columns: 1fr; gap: 36px; }
   .case-sources { grid-template-columns: 1fr 1fr; }
+  .home-writing, .home-about { padding: 56px 20px; }
 }

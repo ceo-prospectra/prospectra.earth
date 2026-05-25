@@ -20,11 +20,11 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: projects/index.qmd
+      - href: index.qmd#projects
         text: Projects
-      - href: writing/index.qmd
+      - href: index.qmd#writing
         text: Writing
-      - href: about.qmd
+      - href: index.qmd#about
         text: About
   page-footer:
     left: "© 2026 Prospectra · Geospatial analytics, indexed to the cell."

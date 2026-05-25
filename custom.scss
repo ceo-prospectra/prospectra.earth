@@ -12,6 +12,8 @@ $border-color: #d4cbb9;  // hair
 /*-- scss:rules --*/
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=DM+Sans:opsz,wght@9..40,300..700&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body { font-feature-settings: "kern", "liga", "calt"; letter-spacing: -0.005em; }
 h1, h2, h3, h4 { font-family: "Fraunces", serif; letter-spacing: -0.02em; font-weight: 400; }
 h1 { font-weight: 300; }

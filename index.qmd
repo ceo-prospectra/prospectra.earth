@@ -100,7 +100,7 @@ format:
 </section>
 
 <!-- ========== PROJECT PREVIEW TILES ========== -->
-<section class="home-projects">
+<section class="home-projects" id="projects">
   <div class="section-label"><span>Projects</span> — Spain's demographic trilogy</div>
   <div class="proj-grid">
 
@@ -136,6 +136,29 @@ format:
 
   </div>
   <p class="proj-more">See all five projects → <a href="projects/index.qmd">Projects</a></p>
+</section>
+
+<!-- ========== WRITING ========== -->
+<section class="home-writing" id="writing">
+  <div class="section-label"><span>Writing</span> — notes from the build</div>
+  <p class="lead">Essays on the methods behind each project — the indexing schemes, the data sources, the trade-offs worth arguing about. The first pieces ship alongside P-01.</p>
+  <div class="writing-list">
+    <div class="writing-row">
+      <span class="wt">H3 as integer hashing</span>
+      <span class="ws">Soon</span>
+    </div>
+    <div class="writing-row">
+      <span class="wt">The H3 resolution trade-off</span>
+      <span class="ws">Soon</span>
+    </div>
+  </div>
+</section>
+
+<!-- ========== ABOUT ========== -->
+<section class="home-about" id="about">
+  <div class="section-label"><span>About</span> — what Prospectra is</div>
+  <p>Prospectra is a geospatial analytics practice, built in public. Spain has a gap: the traditional GIS shops don't run on the lakehouse, and the big Databricks consultancies don't do geospatial. Prospectra is being built to live in that intersection — <span class="about-accent">Databricks-native spatial pipelines on Spain's open data</span>.</p>
+  <p>Right now it's week 5 of a six-month sprint: twenty lessons, five portfolio projects, each shipping as a public article. Block 1 of the curriculum is cleared; the first project ships May 26. This site is the stage where the work goes public.</p>
 </section>
 
 </div>
